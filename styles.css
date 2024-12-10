@@ -50,10 +50,12 @@ h1 {
 
 .content-wrapper {
     display: flex;
+    flex-wrap: wrap;
     gap: 3rem;
     align-items: flex-start;
     max-width: 800px;
     margin: 0 auto;
+    margin-bottom: 4rem;
 }
 
 .profile-image {
@@ -65,7 +67,7 @@ h1 {
 
 .content {
     flex: 1;
-    padding: 0;
+    min-width: 0;
 }
 
 p {
@@ -152,5 +154,61 @@ p {
 
     .profile-section {
         align-items: center;
+    }
+} 
+
+.portfolio {
+    margin-top: 4rem;
+    width: 100%;
+    clear: both;
+}
+
+.portfolio h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.portfolio-item {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+.portfolio-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.portfolio-text {
+    flex: 1;
+}
+
+.portfolio-image {
+    flex: 1;
+    max-width: 500px;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.portfolio-image a:hover img {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .portfolio-item, 
+    .portfolio-item.reverse {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .portfolio-image {
+        order: -1;
+        max-width: 100%;
     }
 } 
