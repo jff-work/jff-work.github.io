@@ -212,3 +212,11 @@ p {
         max-width: 100%;
     }
 } 
+
+.disclaimer {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-style: italic;
+}
