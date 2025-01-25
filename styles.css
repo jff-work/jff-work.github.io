@@ -268,3 +268,51 @@ p {
     margin-bottom: 3rem;
     font-size: 1.2rem;
 }
+
+.freelance-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+.freelance-wrapper .profile-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-top: 0;
+    width: 250px;
+}
+
+.freelance-wrapper .content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .freelance-wrapper {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .freelance-wrapper .profile-section {
+        align-items: center;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .freelance-wrapper .content {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
